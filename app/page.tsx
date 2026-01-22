@@ -201,12 +201,12 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-400 to-red-500">
+    <div className="min-h-screen bg-black">
       {/* Floating Chat Button (Collapsed State) */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center z-50"
+          className="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-br from-blue-700 to-blue-800 hover:from-blue-800 hover:to-blue-900 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center z-50"
           aria-label="Open chat"
         >
           <MessageCircle className="w-7 h-7" />
