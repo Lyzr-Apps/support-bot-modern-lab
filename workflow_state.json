@@ -1,0 +1,28 @@
+{
+  "workflow_status": "complete",
+  "agents_created": 1,
+  "agents": [
+    {
+      "agent_id": "69725d281d92f5e2dd22f8e4",
+      "agent_name": "Customer Support Agent",
+      "status": "active",
+      "has_schema": true,
+      "schema_file": "response_schemas/customer_support_agent_response.json"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "69725d17b8b4bafdd0412937",
+      "rag_name": "intercomaiwebsiteknowledgebasehgan",
+      "name": "IntercomAI Website Knowledge Base",
+      "status": "ready_for_training",
+      "note": "Awaiting website URL from user for content ingestion"
+    }
+  ],
+  "next_steps": [
+    "User must provide website URL for knowledge base training",
+    "Call crawl_website or ingest_files to train the knowledge base",
+    "UI Generator will create chat interface with Send button",
+    "Agent will be ready to answer customer queries"
+  ]
+}

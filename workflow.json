@@ -1,0 +1,86 @@
+{
+  "workflow_name": "IntercomAI Customer Support",
+  "workflow_type": "single_agent",
+  "nodes": [
+    {
+      "id": "user_input",
+      "type": "Input",
+      "label": "Customer Query",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 200 }
+    },
+    {
+      "id": "customer_support_agent",
+      "type": "Agent",
+      "label": "Customer Support Agent",
+      "nodeCategory": "agent",
+      "position": { "x": 400, "y": 200 },
+      "data": {
+        "agent_id": "69725d281d92f5e2dd22f8e4",
+        "agent_name": "Customer Support Agent",
+        "description": "Answers customer queries by searching website knowledge base, provides accurate and helpful responses in a friendly professional tone, handles follow-up questions with conversation memory",
+        "provider": "OpenAI",
+        "model": "gpt-4o-mini",
+        "temperature": 0.4,
+        "top_p": 1,
+        "has_knowledge_base": true,
+        "rag_id": "69725d17b8b4bafdd0412937",
+        "rag_name": "intercomaiwebsiteknowledgebasehgan",
+        "features": ["KNOWLEDGE_BASE", "MEMORY"]
+      }
+    },
+    {
+      "id": "response_output",
+      "type": "Output",
+      "label": "Support Response",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 200 }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "user_input",
+      "target": "customer_support_agent",
+      "animated": true
+    },
+    {
+      "id": "e2",
+      "source": "customer_support_agent",
+      "target": "response_output",
+      "animated": true
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "69725d281d92f5e2dd22f8e4",
+      "agent_name": "Customer Support Agent",
+      "agent_type": "single",
+      "description": "Answers customer queries by searching website knowledge base, provides accurate and helpful responses in a friendly professional tone, handles follow-up questions with conversation memory",
+      "provider": "OpenAI",
+      "model": "gpt-4o-mini",
+      "temperature": 0.4,
+      "top_p": 1,
+      "has_knowledge_base": true,
+      "rag_id": "69725d17b8b4bafdd0412937",
+      "rag_name": "intercomaiwebsiteknowledgebasehgan",
+      "trigger": "Send button in Chat Interface"
+    }
+  ],
+  "knowledge_bases": [
+    {
+      "rag_id": "69725d17b8b4bafdd0412937",
+      "rag_name": "intercomaiwebsiteknowledgebasehgan",
+      "name": "IntercomAI Website Knowledge Base",
+      "description": "Website content knowledge base for answering customer queries accurately based on actual website information",
+      "linked_agents": ["69725d281d92f5e2dd22f8e4"]
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-01-22T00:00:00Z",
+    "total_agents": 1,
+    "total_knowledge_bases": 1,
+    "requires_website_url": true,
+    "website_url_note": "User will provide website URL for knowledge base training"
+  }
+}

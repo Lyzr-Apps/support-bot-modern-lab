@@ -1,0 +1,64 @@
+{
+  "agent_name": "Customer Support Agent",
+  "agent_id": "69725d281d92f5e2dd22f8e4",
+  "agent_purpose": "assistant",
+  "description": "Customer support agent that answers queries using website knowledge base with friendly professional tone and conversation memory",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "answer": "string",
+      "sources": [
+        "any"
+      ],
+      "confidence": "number",
+      "follow_up_suggestions": [
+        "string"
+      ],
+      "requires_human": "boolean"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "answer": "To reset your password, please follow these steps:\n\n1. Go to the login page of our website.\n2. Click on the 'Forgot Password?' link.\n3. Enter the email address associated with your account.\n4. Check your email for a password reset link and follow the instructions.\n5. Create a new password and confirm it.\n\nIf you encounter any issues during the process, feel free to reach out for further assistance!",
+      "sources": [],
+      "confidence": 0.95,
+      "follow_up_suggestions": [
+        "What if I don't receive the password reset email?",
+        "Can I change my password from my account settings?",
+        "Is there a way to recover my account if I'm locked out?"
+      ],
+      "requires_human": false
+    },
+    "metadata": {
+      "agent_name": "Customer Support Agent",
+      "timestamp": "2023-10-06T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-22T17:25:00.843448",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "answer": "To reset your password, please follow these steps:\n\n1. Go to the login page of our website.\n2. Click on the 'Forgot Password?' link.\n3. Enter the email address associated with your account.\n4. Check your email for a password reset link and follow the instructions.\n5. Create a new password and confirm it.\n\nIf you encounter any issues during the process, feel free to reach out for further assistance!",
+      "sources": [],
+      "confidence": 0.95,
+      "follow_up_suggestions": [
+        "What if I don't receive the password reset email?",
+        "Can I change my password from my account settings?",
+        "Is there a way to recover my account if I'm locked out?"
+      ],
+      "requires_human": false
+    },
+    "metadata": {
+      "agent_name": "Customer Support Agent",
+      "timestamp": "2023-10-06T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}
